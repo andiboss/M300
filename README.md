@@ -28,7 +28,7 @@ So kann man gewünschte Pakete installieren.
     sudo apt-get -y install "PAKET"
 
 
-*Virtualisierung*
+**Virtualisierung**
 Das Ziel dieses Modules ist es, alles automatisiert zu Virtualisieren. Für die Virtualisierung verwenden wir Virtual Box. Man kann auf einem physischen Server, viele virtuelle Server haben, was natürlich sehr viele Ressourcen spart. Ebenfalls ist es sehr platzsparend und kostengünstiger.
 Eine weitere sehr verbreitete virtualisierungs Methode ist Cloud Computing. Unter Cloud Computing versteht man, wenn man ein Programm ausführt, welches sich nicht auf dem lokalen Gerät befindet. Von Cloud Computing gibt es verschiedene Arten:
 
@@ -42,7 +42,7 @@ Software as a Service (SaaS)
 SaaS bezeichnet ein Distributionsmodell für Anwendungen über den Webbrowser. SaaS wird als Teilbereich des Cloud Computings verstanden, da angeforderte Applikationen nie direkt auf dem Gerät des Nutzers vorhanden sind.
 
 
-*Vagrant*
+**Vagrant**
 Vagrant brauchte ich in diesem Mdoul, um meine Virtuellen Maschienen automatisiert aufzusetzen und den gewünschten Service mit zu installieren. Vagrant ist eine Software, welche in BASH läuft. So kann ein Vagrant File aussehen:
 
     Vagrant.configure(2) do |config|
@@ -61,7 +61,7 @@ Vagrant brauchte ich in diesem Mdoul, um meine Virtuellen Maschienen automatisie
     end
 
 
-*Versionsverwaltung*
+**Versionsverwaltung**
 Die Versionsverwaltung braucht man, um zentral, Dokumente abzulegen und zu bearbeiten. Es ist sehr geeignet, wenn mehrere Benutzer auf einem Dokument oder Skript arbeiten müssen. Wenn man bei GitHub ein Dokument herunterlädt und bearbeitet, muss man beim wieder hochladen immer schreiben, was geändert wurde. So kann jede Veränderung nachgewiesen werden.
 Hier sieht man die Help Page von Git:
 
