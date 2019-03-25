@@ -38,7 +38,7 @@ PaaS bezeichnet eine Cloudumgebung, die eine Plattform für die Entwicklung von 
 SaaS bezeichnet ein Distributionsmodell für Anwendungen über den Webbrowser. SaaS wird als Teilbereich des Cloud Computings verstanden, da angeforderte Applikationen nie direkt auf dem Gerät des Nutzers vorhanden sind.
 
 **Vagrant**
-Vagrant brauchte ich in diesem Mdoul, um meine Virtuellen Maschienen automatisiert aufzusetzen und den gewünschten Service mit zu installieren. Vagrant ist eine Software, welche in BASH läuft. So kann ein Vagrant File aussehen:
+Vagrant brauchte ich in diesem Modul, um meine Virtuellen Maschienen automatisiert aufzusetzen und den gewünschten Service mit zu installieren. Vagrant ist eine Software, welche in BASH läuft. So kann ein Vagrant File aussehen:
 
     Vagrant.configure(2) do |config|
     config.vm.box = "ubuntu/xenial64"
@@ -125,6 +125,8 @@ Danach kann man in irgendeiner Bash mit Hilfe von Vagrant eine VM aufsetzen.
 
 Mit diesem Befehl wird eine VM anhand des Vagrantfile erstellt.
 
+
+
 **Vagrant Befehle**
 Hier sind noch weitere Vagrant Befehle:
 
@@ -189,9 +191,13 @@ Die Weiterleitung wird in der Datei (etc/apache2/sites-enabled/001-reverseproxy.
     ProxyPassReverse /master http://master
 
 
+
 ## Schlusswort
 **Reflexion**
 Die LB2 des Modul 300 wahr sehr umfangreich. Diese Umgebung war neu für mich und ich musste mich zuerst zurecht finden. Nach einigen versuchen kam ich immer besser mit der Automatisierung zurecht. Ich konnte viel neues lernen. Leider verwenden wir keines der Programme im Arbeitsalltag. Daher wird mir das neue Wissen momentan nichts bringen. Jedoch kenne ich nun die Programme und weiss um was es geht. Ich hoffe ich kann mein neu gelerntes Wissen wiedermal brauchen.
 
 **Vergleich Vorwissen - Wissenszuwachs**
 Vor diesem Modul hatte ich noch nie was mit Vagrant, Visual Studio Code oder Virtual Box zu tun. Mit Vagrant kann ich nun VM's automatisiert aufsetzten. Mit Visual Studio Code habe ich die Dokumentation gestalltet. Diese mussten wir im Mark-Down style schreiben. Auch dies habe ich hier im Modul das erste mal gemacht. Vorher wusste ich nicht was das ist. Ich nun auch ein bisschen besser mit Linux zurecht.
+
+**Probleme**
+Ich bemerkte das Vagrant mühe hat, zwei Webserver gleichzeitig zu hosten. Ich wollte während dem ich bereits einen Webserver hatte, einen zweiten installieren. Bereits währnd der Installation gab es Probleme. Zum testen löschte ich den ersten Web-Server. Danach konnte ich wieder einen anderen Webserver ohne Probleme aufsetzten. 
