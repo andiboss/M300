@@ -189,3 +189,9 @@ Die Weiterleitung wird in der Datei (etc/apache2/sites-enabled/001-reverseproxy.
     ProxyPassReverse /master http://master
 
 
+## Schlusswort
+**Reflexion**
+Die LB2 des Modul 300 wahr sehr umfangreich. Diese Umgebung war neu für mich und ich musste mich zuerst zurecht finden. Nach einigen versuchen kam ich immer besser mit der Automatisierung zurecht. Ich konnte viel neues lernen. Leider verwenden wir keines der Programme im Arbeitsalltag. Daher wird mir das neue Wissen momentan nichts bringen. Jedoch kenne ich nun die Programme und weiss um was es geht. Ich hoffe ich kann mein neu gelerntes Wissen wiedermal brauchen.
+
+**Vergleich Vorwissen - Wissenszuwachs**
+Vor diesem Modul hatte ich noch nie was mit Vagrant, Visual Studio Code oder Virtual Box zu tun. Mit Vagrant kann ich nun VM's automatisiert aufsetzten. Mit Visual Studio Code habe ich die Dokumentation gestalltet. Diese mussten wir im Mark-Down style schreiben. Auch dies habe ich hier im Modul das erste mal gemacht. Vorher wusste ich nicht was das ist. Ich nun auch ein bisschen besser mit Linux zurecht.
