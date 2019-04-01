@@ -206,3 +206,28 @@ Ich bemerkte das Vagrant mühe hat, zwei Webserver gleichzeitig zu hosten. Ich w
 
 
 # LB3
+
+## K1
+**GitHub**
+GitHub brauchen wir für die Versionsverwaltung. Bei GitHub kann man Dokumente zentral hochladen und runterladen.
+
+**Vagrant**
+Vagrant ist die Software, mit welcher wir unsere Virtuellen Maschinen automatisiert aufsetzen können.
+
+**Virtual Box**
+Virtual Box ist unsere Virtualisierungsumgebung. Dort werden unsere Virtuellen Maschinen aufgesetzt und gespeichert.
+
+**Visual Studio Code**
+Visual Studio Code brauche ich um die Dokumentation zu schreiben. Dies mache ich im Mark-Down style. Der Vorteil von Visual Studio Code ist das ich das geschriebene direkt in Github hochladen kann. 
+
+
+
+## K2
+
+
+**Containerisierung** 
+
+
+**Docker**
+ 
+
