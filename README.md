@@ -231,3 +231,14 @@ Visual Studio Code brauche ich um die Dokumentation zu schreiben. Dies mache ich
 **Docker**
  
 
+## K3
+Als erstes musste ich einen Container erstellen. Darin hat es einen Webserver. Das ganze habe ich so gemacht:
+
+Zu beginn muss ein Image erstellt werden.
+    build image -t websrv .
+
+Mit folgenden Befehl kann überprüft werden ob das Image erstellt wurde.
+    docker images
+
+Danach muss der Container erstellt werden. Dazu muss das Image, welches ich erstellt habe angegeben werden. 
+     docker run --rm -d --name websrv websrv
