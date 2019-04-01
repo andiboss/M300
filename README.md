@@ -244,4 +244,4 @@ Mit folgenden Befehl kann überprüft werden ob das Image erstellt wurde.
 
 Danach muss der Container erstellt werden. Dazu muss das Image, welches ich erstellt habe angegeben werden. 
 
-     docker run --rm -d --name websrv websrv
+    docker run --rm -d --name websrv websrv
