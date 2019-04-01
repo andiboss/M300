@@ -267,6 +267,6 @@ Hier sind noch weitere Docker Befehle:
 | `docker run --rm -d- --name "image-name" "name"`             | Container erstellen                   |
 | `docker ps`          | Zeigt Container an                              |
 | `docker exec -it "name" bash`            | Zugriff auf erstellten Web-Server                        |
-| `vagrant halt`            | Stoppt die laufende Virtuelle Maschine                            |
-| `vagrant destroy`         | Stoppt die Virtuelle Maschine und zerstört sie.                   |
+| `docker rm "name"`            | Docker Container löschen                            |
+| `docker rm -f docker ps -a -q`         | Alle Container, auch aktive, löschen                  |
 
