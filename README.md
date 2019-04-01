@@ -262,11 +262,12 @@ Hier sind noch weitere Docker Befehle:
 
 | Befehl                    | Beschreibung                                                      |
 | ------------------------- | ----------------------------------------------------------------- | 
-| `docker image -t "image-name"`            | Erstellt Image |
+| `docker build image -t "image-name"`            | Erstellt Image |
 | `docker images`              |  Zeigt alles Images an|
 | `docker run --rm -d- --name "image-name" "name"`             | Container erstellen                   |
 | `docker ps`          | Zeigt Container an                              |
 | `docker exec -it "name" bash`            | Zugriff auf erstellten Web-Server                        |
 | `docker rm "name"`            | Docker Container löschen                            |
 | `docker rm -f docker ps -a -q`         | Alle Container, auch aktive, löschen                  |
-
+| `docker volume create "name"`         | Erstellt Volume               |
+| `docker volume ls`         | Ausgabe aller Volumes                 |
