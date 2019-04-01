@@ -245,3 +245,28 @@ Mit folgenden Befehl kann überprüft werden ob das Image erstellt wurde.
 Danach muss der Container erstellt werden. Dazu muss das Image, welches ich erstellt habe angegeben werden. 
 
     docker run --rm -d --name websrv websrv
+
+Kontollieren kann man das ganze mit folgendem Befehlen
+
+    docker ps
+    docker exec -it mysql bash
+
+Unter URL:http://localhost:8080 war ist der Webserver erreichbar. 
+
+
+**Volumes**
+
+
+**Docker Befehle**
+Hier sind noch weitere Docker Befehle:
+
+| Befehl                    | Beschreibung                                                      |
+| ------------------------- | ----------------------------------------------------------------- | 
+| `docker image -t "image-name"`            | Erstellt Image |
+| `docker images`              |  Zeigt alles Images an|
+| `docker run --rm -d- --name "image-name" "name"`             | Container erstellen                   |
+| `docker ps`          | Zeigt Container an                              |
+| `docker exec -it "name" bash`            | Zugriff auf erstellten Web-Server                        |
+| `vagrant halt`            | Stoppt die laufende Virtuelle Maschine                            |
+| `vagrant destroy`         | Stoppt die Virtuelle Maschine und zerstört sie.                   |
+
