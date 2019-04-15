@@ -304,6 +304,10 @@ Um zur Sicherheit beizutragen, habe ich den cAdvisor von Google installiert. Die
 
     docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
 
+Um zu sehen was der cAdvisor alles macht nutzt man folgenden Befehl.
+
+    tail -f /var/log/syslog
+
 Ausserdem habe ich das Standard-Logging (JSON-File) auch konfiguriert. Hier wird alles Protokolliert was an den STDOUT und STDERR geschickt wird. 
 
     docker run --name logtest ubuntu bash -c 'echo "stdout"; echo "stderr" >>2'
