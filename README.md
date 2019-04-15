@@ -255,7 +255,17 @@ Unter URL:http://localhost:8080 war ist der Webserver erreichbar.
 
 
 **Volumes**
+Um ein Volume zu ertstellen, muss folgender Befehl angewendet werden.
+    docker volume create volumeLB3
 
+Um alle Volumes anzuschauen folgender Befehl.
+    docker volume ls
+
+So habe ich das Volume gemountet.
+    docker run -d \
+    --name devtest \
+    --mount source=myvol2,target=/app \
+    nginx:latest
 
 **Docker Befehle**
 Hier sind noch weitere Docker Befehle:
