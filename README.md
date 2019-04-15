@@ -322,6 +322,7 @@ Löschen.
 
 **Syslog**
 
-Unter /var/log/syslog wird ebenfalls alles Dokumentiert. 
+Unter /var/log/syslog wird ebenfalls alles Dokumentiert.
 
+    docker run -d --log-driver=syslog ubuntu bash -c 'i=0; while true; do i=$((i+1)); echo "docker $i"; sleep 1; done;'
     tail -f /var/log/syslog
