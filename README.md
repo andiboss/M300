@@ -226,6 +226,17 @@ Visual Studio Code brauche ich um die Dokumentation zu schreiben. Dies mache ich
 
 
 **Containerisierung** 
+Was ist ein Container?
+Ein Linux Container ist ein Satz an Prozessen, die vom Rest des Systems isoliert sind und auf einem eigenen Image ausgeführt werden, das alle benötigten Dateien zur Unterstützung der Prozesse bereitstellt. Durch Bereitstellung eines Image, das alle Abhängigkeiten einer Anwendung enthält, ist er portabel und bleibt konsistent und lässt sich so problemlos von der Entwicklung über die Prüfung und schließlich in die Produktion überführen.
+ 
+**Container vs. Virtualisierung**
+ 
+Container
+Container teilen sich den gleichen Betriebssystem-Kernel und isolieren die Anwendungsprozesse vom Rest des Systems. 
+Virtualisierung
+Die Virtualisierung ermöglicht, dass mehrere Betriebssysteme gleichzeitig auf einem einzigen System laufen.
+ 
+Was bedeutet das? Erst einmal: Mehrere Betriebssysteme auf einem Hypervisor laufen zu lassen – der Software, die Virtualisierung möglich macht – belastet das System mehr als die Verwendung von Containern. Wenn Sie nur über endliche Ressourcen mit endlichen Fähigkeiten verfügen, benötigen Sie kompakte Apps, die in großer Dichte eingesetzt werden können. Linux-Container arbeiten aus diesem einzelnen Betriebssystem heraus und nutzen es gemeinsam für alle Ihre Container. So bleiben Ihre Apps und Dienste leicht und können zügig parallel laufen.
 
 
 **Docker**
@@ -284,3 +295,23 @@ Hier sind noch weitere Docker Befehle:
 | `docker rm -f docker ps -a -q`         | Alle Container, auch aktive, löschen                  |
 | `docker volume create "name"`         | Erstellt Volume               |
 | `docker volume ls`         | Ausgabe aller Volumes                 |
+
+
+## K4
+
+**cAdvisor**
+Um zur Sicherheit beizutragen, habe ich den cAdvisor von Google installiert. Dies habe ich mit diesem Befehl gemacht. 
+
+    docker run -d --name cadvisor -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -p 8080:8080 google/cadvisor:latest
+
+Ausserdem habe ich das Standard-Logging (JSON-File) auch konfiguriert. Hier wird alles Protokolliert was an den STDOUT und STDERR geschickt wird. 
+
+    docker run --name logtest ubuntu bash -c 'echo "stdout"; echo "stderr" >>2'
+
+Mit folgdenem Befehl kann ich das Log anschauen.
+
+    docker logs logtest
+
+Löschen.
+
+    docker rm logtest
