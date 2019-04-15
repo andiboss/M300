@@ -307,9 +307,10 @@ Um zur Sicherheit beizutragen, habe ich den cAdvisor von Google installiert. Die
 
 **Standard-Logging (JSON-File)**
 
-Ausserdem habe ich das Standard-Logging (JSON-File) auch konfiguriert. Hier wird alles Protokolliert was an den STDOUT und STDERR geschickt wird. 
+Ausserdem habe ich das Standard-Logging (JSON-File) auch konfiguriert. Hier wird alles Protokolliert was an den STDOUT und STDERR geschickt wird. Das ganze kann man auch jede Sekunde ausgeben lassen. Dazu wäre der zweite Befehl.
 
     docker run --name logtest ubuntu bash -c 'echo "stdout"; echo "stderr" >>2'
+    docker run -d --name streamtest ubuntu bash -c 'while true; do echo "tick"; sleep 1; done;'
 
 Mit folgdenem Befehl kann ich das Log anschauen.
 
@@ -318,6 +319,8 @@ Mit folgdenem Befehl kann ich das Log anschauen.
 Löschen.
 
     docker rm logtest
+
+**Syslog**
 
 Unter /var/log/syslog wird ebenfalls alles Dokumentiert. 
 
