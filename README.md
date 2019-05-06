@@ -326,3 +326,11 @@ Unter /var/log/syslog wird ebenfalls alles Dokumentiert.
 
     docker run -d --log-driver=syslog ubuntu bash -c 'i=0; while true; do i=$((i+1)); echo "docker $i"; sleep 1; done;'
     tail -f /var/log/syslog
+
+
+## K5
+**Vergleich Vorwissen / Nachwissen**
+Ich hatte vor diesem Modul noch nie was mit Container zu tun. Dementsprechend hatte ich kein Vorwissen. Für mich war alles mehr oder weniger neu. Ich habe bereits vieles über Container gehört jedoch hatte ich noch nie was damit zu tun. Jetzt konnte ich selber damit arbeiten und erkenne dessen Vorteile.
+
+**Reflexion**
+In diesem Modul konnte ich viel neues Lernen. Ich habe gemerkt das Container ein wichtiges Thema ist, welches auch in Zukunft eine grosse Rolle spielen wird. Daher bin ich forh das ich bereits jetzt eine kleinen Einblick in das Thema bekommen habe. Ich finde es gut wie die LB3 aufgebaut ist. Es ist klar geschrieben was gefordert ist. 
