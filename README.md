@@ -240,7 +240,8 @@ Was bedeutet das? Erst einmal: Mehrere Betriebssysteme auf einem Hypervisor lauf
 
 
 **Docker**
- 
+ Mit Docker ist es möglich, Container zu implementieren. Ausserdem kann man Services inklusive deren Abhängikeiten in den Container verpacken. Container sind sehr nützlich, da jeder individuell gestalltet werden kann. Damit eine Dockerumgebung läuft, braucht es immer ein Image.
+
 
 ## K3
 Als erstes musste ich einen Container erstellen. Darin hat es einen Webserver. Das ganze habe ich so gemacht:
@@ -333,4 +334,28 @@ Unter /var/log/syslog wird ebenfalls alles Dokumentiert.
 Ich hatte vor diesem Modul noch nie was mit Container zu tun. Dementsprechend hatte ich kein Vorwissen. Für mich war alles mehr oder weniger neu. Ich habe bereits vieles über Container gehört jedoch hatte ich noch nie was damit zu tun. Jetzt konnte ich selber damit arbeiten und erkenne dessen Vorteile.
 
 **Reflexion**
-In diesem Modul konnte ich viel neues Lernen. Ich habe gemerkt das Container ein wichtiges Thema ist, welches auch in Zukunft eine grosse Rolle spielen wird. Daher bin ich forh das ich bereits jetzt eine kleinen Einblick in das Thema bekommen habe. Ich finde es gut wie die LB3 aufgebaut ist. Es ist klar geschrieben was gefordert ist. 
+In diesem Modul konnte ich viel neues Lernen. Ich habe gemerkt das Container ein wichtiges Thema ist, welches auch in Zukunft eine grosse Rolle spielen wird. Daher bin ich forh das ich bereits jetzt eine kleinen Einblick in das Thema bekommen habe. Ich finde es gut wie die LB3 aufgebaut ist. Es ist klar geschrieben was gefordert ist.
+
+## K6
+**Kubernetes**
+Zuerst musste ich einen eingenen Namespace erstellen. Diesen habe ich test genannt.
+
+    kubectl create namespace test
+
+Danach habe ich den einen Pod erzeugt. In diesem Fall war dieser der Apache Web Server.
+
+    kubectl run apache --image=httpd --restart=Never --namespace test
+
+Kubernetes erzeugt zu jeder Ressource immer eine YAML Datei. So müssen wir nicht jede YAML Datei von Hand erstellen.
+
+    kubectl get pod apache -o yaml --namespace test
+
+Das unser Web Server von aussen sichtbar wird, müssen wir eine weiteren Service installieren.
+
+    kubectl expose pod/apache --type="LoadBalancer" --port 80 --namespace test
+
+Auch hier müssen wir eine YAML Datei ausgeben.
+
+    kubectl get service apache -o yaml --namespace test
+
+Mit der default IP-Adresse (192.168.137.100) können wir auf den Service zugreifen.
